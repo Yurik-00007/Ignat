@@ -1,0 +1,35 @@
+.message {
+text-align: right;
+}
+
+.imageAndText {
+    text-align: right;
+    border-radius: 10px;
+    /*width: 30%;*/
+}
+
+.imageAndText img {
+    width: 30px;
+}
+
+.text {
+color:white;
+    background-color: #0066CC;
+    border-radius: 5px;
+}
+
+.text:after {
+
+}
+
+.name {
+
+}
+
+.messageText {
+
+}
+
+.time {
+font-size: 10px;
+}

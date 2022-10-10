@@ -1,0 +1,32 @@
+.friendMessage {
+
+}
+
+.friendImageAndText {
+
+}
+
+.friendImageAndText img {
+    width: 30px;
+}
+
+.friendText {
+    background-color: #F5F7FB;
+    border-radius: 5px;
+}
+
+.friendText:after {
+
+}
+
+.friendName {
+
+}
+
+.friendMessageText {
+
+}
+
+.friendTime {
+    font-size: 10px;
+}
