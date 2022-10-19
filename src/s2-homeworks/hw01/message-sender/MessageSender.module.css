@@ -1,18 +1,20 @@
 .sendForm {
-    text-align: center;
-    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
 }
 
 .textarea {
-    text-align: left;
-    width: 90%;
-    padding: 5px;
-    border-radius: 10px;
+    min-width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
     border: 1px solid transparent;
     background-color: #F5F7FB;
 }
 
 .button {
+    width: 10%;
     border-radius: 10px;
     background: #0066CC;
     color: white;
@@ -25,6 +27,7 @@
     background: white;
     color:  #0066CC;
     border: 1px solid #0066CC;
+    font-weight: 700;
 
 }
 .button:active {

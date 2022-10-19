@@ -3,20 +3,31 @@
 }
 
 .friendImageAndText {
-
+    display: flex;
+    margin-top: 2rem;
 }
 
 .friendImageAndText img {
-    width: 30px;
+    width: 50px;
+    margin: 1rem 1rem 0 0 ;
 }
 
 .friendText {
     background-color: #F5F7FB;
-    border-radius: 5px;
+    border: 1px solid #F5F7FB;
+    border-radius: 10px;
+    padding: 10px;
+    /*position: relative;*/
+
 }
 
 .friendText:after {
-
+    content: '';
+    position: absolute;
+    left: 40px; bottom: 620px;
+    border: 10px solid transparent;
+    border-left: 20px solid whitesmoke;
+    transform: rotate(170deg);
 }
 
 .friendName {
@@ -28,5 +39,6 @@
 }
 
 .friendTime {
-    font-size: 10px;
+    font-size: 12px;
+    padding: 0 5px 0 10px;
 }
