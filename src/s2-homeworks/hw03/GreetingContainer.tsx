@@ -5,6 +5,7 @@ import { UserType } from './HW3'
 type GreetingContainerPropsType = {
     users: UserType[] // need to fix any
     addUserCallback: (name:string)=>void // need to fix any
+    //addUserCallback: (...x:any[])=>void //вариант как можно написать
 }
 
 export const pureAddUser = (name: string, setError:(error: string)=>void, setName:(name: string)=>void, addUserCallback: (name:string)=>void) => {
@@ -12,13 +13,15 @@ export const pureAddUser = (name: string, setError:(error: string)=>void, setNam
     if(name.trim()!==''){
         addUserCallback(name)
         setName('')
+       // setName('')
         setError('')
 
-        //console.log(`НЕ добавить ${name}`)
+       // console.log(`Добавить ${name}`)
     }else {
+        setName('')
         setError('Ошибка! Введите имя!')
 
-        //console.log(`Добавить ${name}`)
+       // console.log(`НЕ добавить ${name}`)
     }
 
 }
@@ -64,7 +67,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
 
     const totalUsers = users.length // need to fix
-    const lastUserName = users.map(u=>u.name).pop() // need to fix
+    const lastUserName = users.length ? users[totalUsers - 1].name : ''; // need to fix
+    //const lastUserName = users.map(u=>u.name).pop() // need to fix
 
     return (
         <Greeting

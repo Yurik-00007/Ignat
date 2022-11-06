@@ -8,7 +8,7 @@
 }
 
 .input {
-    border: 1px solid green;
+    outline: 3px solid green;
 }
 
 .input:focus {
