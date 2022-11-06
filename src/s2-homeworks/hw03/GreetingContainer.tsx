@@ -18,7 +18,6 @@ export const pureAddUser = (name: string, setError:(error: string)=>void, setNam
 
        // console.log(`Добавить ${name}`)
     }else {
-        setName('')
         setError('Ошибка! Введите имя!')
 
        // console.log(`НЕ добавить ${name}`)
