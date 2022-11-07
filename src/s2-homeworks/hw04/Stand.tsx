@@ -42,25 +42,35 @@ const Stand = () => {
 
             <div className={s.buttons}>
                 {/*обычная кнопка:*/}
-                <div>
-                    <SuperButton id={'hw4-super-button-default'}>
+                <div >
+                    <SuperButton id={'hw4-super-button-default'} >
+
+{/*
                         default
+*/}
+
                     </SuperButton>
                 </div>
                 {/*красная кнопка:*/}
-                <div>
+                <div >
                     <SuperButton id={'hw4-super-button-red'} xType={'red'}>
+
+{/*
                         red
+*/}
+
                     </SuperButton>
                 </div>
                 {/*задизэйбленная кнопка:*/}
                 <div>
                     <SuperButton
                         id={'hw4-super-button-disabled'}
-                        xType={'red'}
+                        xType={'secondary'}
                         disabled
                     >
+{/*
                         disabled
+*/}
                     </SuperButton>
                 </div>
                 {/*задизэйбленная кнопка:*/}
@@ -69,7 +79,9 @@ const Stand = () => {
                         id={'hw4-super-button-secondary'}
                         xType={'secondary'}
                     >
+{/*
                         secondary
+*/}
                     </SuperButton>
                 </div>
             </div>
