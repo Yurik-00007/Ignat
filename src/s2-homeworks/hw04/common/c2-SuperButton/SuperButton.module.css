@@ -1,36 +1,125 @@
 .button {
+    /*
+    width: 84px;
+    height: 20px;
+    */
+
+    width: 114px;
+    border-radius: 3px;
+    padding: 5px 24px;
+    border: 1px solid transparent;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+
 }
 
+.red,
+.secondary,
+.default,
+.disabled{
+
+    width: 154px;
+    border-radius: 3px;
+    padding: 5px 24px;
+    border: 1px solid #1769C9;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/*.button::before {
+    content: "DEFAULT TEXT";
+}
+
+.button:hover::before {
+    content: "TEXT WHEN HOVER";
+}*/
+
 .disabled {
+    opacity: 0.3;
+}
+
+.disabled::before {
+    content: "Не активная";
 }
 
 .secondary {
+    /*background-color: #413e3b;*/
+    border: 1px solid #1769C9;
+    color: #1769C9;
+    /*
+    background-color: #E6F0FA;
+    */
+}
+
+.secondary::before {
+content: "Дополнительная"
 }
 
 .default {
+    background-color: #1769C9;
+}
+
+.default::before {
+    content: "Дефолтная";
 }
 
 .red {
+    background-color: #CC1439;
+}
+.red::before {
+    content:'Опасность'
 }
 
-.default:hover {
+.red:hover ,
+.secondary:hover ,
+.default:hover  ,
+.disabled:hover  {
+
+    width: 154px;
+    border-radius: 3px;
+    padding: 5px 24px;
+    border: 1px solid #1769C9;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
 }
 
-.red:hover {
+.default:hover::before {
+    content: "При наведении";
 }
 
-.secondary:hover {
+.red:hover::before {
+    content: "При наведении";
+}
+
+.secondary:hover::before {
+    content: "При наведении";
+    color: #1769C9;
+    background-color: #E6F0FA;
+    border-radius: 3px;
+   /* padding: 5px 1%;*/
+
 }
 
 
-.default:active {
+.default:active::before {
+    content: "При нажатии";
 }
 
-.secondary:active {
+.secondary:active::before {
+    content: "При нажатии";
+    border: 1px solid #1769C9;
+    color: #1769C9;
+    background-color: #E6F0FA;
+
 }
 
-.red:active {
+.red:active::before {
+    content: "При нажатии";
 }
 
-.button:disabled {
+.button:disabled::before {
+    content: "Не активная";
 }
