@@ -4,8 +4,9 @@ import {restoreState} from '../hw06/localStorage/localStorage'
 import s from './Clock.module.css'
 
 function Clock() {
+    //debugger
     //const [timerId, setTimerId] = useState<number | undefined>(undefined)
-    const [timerId, setTimerId] = useState<number | undefined>(0)
+    const [timerId, setTimerId] = useState<number | undefined>(undefined)
     // for autotests // не менять // можно подсунуть в локалСторэдж нужную дату, чтоб увидеть как она отображается
     const [date, setDate] = useState<Date>(new Date(restoreState('hw9-date', Date.now())))
     const [show, setShow] = useState<boolean>(false)
@@ -15,6 +16,7 @@ function Clock() {
         const id: number = +setInterval(() => {
             setDate(new Date())
         }, 1000)
+
         setTimerId(id)
         setIsSetInterval(true)
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
@@ -36,8 +38,8 @@ function Clock() {
     }
 
     const stringTime = date?.toLocaleTimeString() || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = date?.toLocaleDateString() || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
-
+    const stringDate = date?.toLocaleDateString('en-US') || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+    console.log(stringDate)
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
     const stringDay = date?.toLocaleString('en-us', {weekday: 'long'}) || <br/> // пишут студенты
     const stringMonth = date?.toLocaleString('en-us', {month: 'long'}) || <br/> // пишут студенты
