@@ -15,7 +15,7 @@ beforeEach(() => {
     ]
 })
 
-test.skip('sort name up', () => {
+test('sort name up', () => {
     const newState = homeWorkReducer(initialState, {
         type: 'sort',
         payload: 'up',
@@ -23,7 +23,7 @@ test.skip('sort name up', () => {
 
     expect(newState[0]._id).toBe(1)
 })
-test.skip('sort name down', () => {
+test('sort name down', () => {
     const newState = homeWorkReducer(initialState, {
         type: 'sort',
         payload: 'down',
@@ -31,7 +31,7 @@ test.skip('sort name down', () => {
 
     expect(newState[0]._id).toBe(0)
 })
-test.skip('check age 18', () => {
+test('check age 18', () => {
     const newState = homeWorkReducer(initialState, {
         type: 'check',
         payload: 18,
